@@ -1,32 +1,11 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-/* .search-field {
-  border: none;
-  border-radius: 50px;
-  padding: 5px;
-  outline: none;
-} */
-/* .search-field:hover {
-  outline: none;
-  border: none;
-} */
 
-.search-box {
-  width: 281px;
-  margin: 50px auto;
-}
-
-/* .search-button {
-  padding: 10px 50px;
-  border-radius: 25px;
-  margin-left: 20px;
-} */
-
+/* style for all product section */
 #all-products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* border: 1px solid black; */
   text-align: center;
   width: 100%;
   margin: auto;
@@ -46,10 +25,14 @@ body {
   box-shadow: 4px 4px 7px gray;
   border: 1px solid gray;
 }
+
+/* per product image size */
 .product-image {
   width: 150px;
   height: 150px;
 }
+
+/* My-Cart style goes here */
 .cart {
   width: 350px;
   padding: 10px;
@@ -58,9 +41,13 @@ body {
   margin-right: 30px;
   position: fixed;
 }
+
+/*  */
 .cart-main {
   padding-right: 30px;
 }
+
+/* trying Responsive Style goes here */
 @media only screen and (max-width: 768px) {
   #all-products {
     display: grid;

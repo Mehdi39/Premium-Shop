@@ -68,10 +68,9 @@ const showProducts = (products) => {
   }
 };
 
-const details = () => {
-  console.log(data)
-}
+// initial product always 0
 let count = 0;
+// function for adding cart
 const addToCart = (id, price) => {
   count = count + 1;
   updatePrice("price", price);
@@ -81,14 +80,15 @@ const addToCart = (id, price) => {
   updateTotal();
 };
 
+// function for round up to 2 decimal. all create goes to StackOver.
 const round = (n, dp) => {
   const h = +('1'.padEnd(dp + 1, '0')) // 10 or 100 or 1000 or etc
   return Math.round(n * h) / h
 }
 
+// Function for input Value
 const getInputValue = (id) => {
   const element = document.getElementById(id).innerText;
-  console.log(element)
   const converted = parseFloat(element);
   return converted;
 };
@@ -133,6 +133,7 @@ const updateTotal = () => {
   document.getElementById("total").innerText = round(grandTotal, 2);
 };
 
+// fetching api for single product details
 const getSingleProduct = (id) => {
 
   fetch(`https://fakestoreapi.com/products/${id}`)
